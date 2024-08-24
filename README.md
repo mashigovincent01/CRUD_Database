@@ -53,48 +53,53 @@ CREATE TABLE Student (
     Age INT NOT NULL
 );
 ```
-##Controller Actions
-The StudentController handles the following CRUD operations:
+# Student Management System
 
-##Index (Read)
-Action: Index
+## Overview
+The Student Management System is an ASP.NET MVC application that allows for basic CRUD operations on student records. This application is designed to help manage student information efficiently.
 
-Description: Retrieves and displays a list of all students.
-Route: /Student/Index
-Create (Create)
-Action: Create
-Description: Displays a form to create a new student and inserts the record into the database.
-Route: /Student/Create
-Method: GET and POST
-Edit (Update)
-Action: Edit
-Description: Retrieves a specific student's details for editing and updates the record in the database.
-Route: /Student/Edit/{id}
-Method: GET and POST
-Delete (Delete)
-Action: Delete
-Description: Deletes a student record based on the ID.
-Route: /Student/Delete/{id}
-# Models
-## Student Model
-The Student class represents the student entity with the following properties:
+## Controller Actions
+The `StudentController` handles the following CRUD operations:
 
-Id (int): The unique identifier for the student.
+### Index (Read)
+- **Action**: `Index`
+- **Description**: Retrieves and displays a list of all students.
+- **Route**: `/Student/Index`
 
-Name (string): The name of the student.
+### Create (Create)
+- **Action**: `Create`
+- **Description**: Displays a form to create a new student and inserts the record into the database.
+- **Route**: `/Student/Create`
+- **Method**: GET and POST
 
-StudentNo (string): The student number.
+### Edit (Update)
+- **Action**: `Edit`
+- **Description**: Retrieves a specific student's details for editing and updates the record in the database.
+- **Route**: `/Student/Edit/{id}`
+- **Method**: GET and POST
 
-GPA (decimal): The grade point average of the student.
+### Delete (Delete)
+- **Action**: `Delete`
+- **Description**: Deletes a student record based on the ID.
+- **Route**: `/Student/Delete/{id}`
 
-Age (int): The age of the student.
+## Models
 
-# Views
+### Student Model
+The `Student` class represents the student entity with the following properties:
+- **Id** (int): The unique identifier for the student.
+- **Name** (string): The name of the student.
+- **StudentNo** (string): The student number.
+- **GPA** (decimal): The grade point average of the student.
+- **Age** (int): The age of the student.
+
+## Views
 The application includes the following views:
+- **Index**: Displays a list of all students.
+- **Create**: Form for creating a new student.
+- **Edit**: Form for editing an existing student.
+- **Delete**: Confirmation page for deleting a student.
 
-Index: Displays a list of all students.
-Create: Form for creating a new student.
-Edit: Form for editing an existing student.
-Delete: Confirmation page for deleting a student.
-Error Handling
-Basic error handling is implemented using try-catch blocks in the controller actions. Errors are displayed using ViewBag.Error.
+## Error Handling
+Basic error handling is implemented using try-catch blocks in the controller actions. Errors are displayed using `ViewBag.Error`.
+
